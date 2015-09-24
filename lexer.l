@@ -430,6 +430,16 @@ printf("ID\n");
 return ID;
 }
 
+. {
+
+}
+[ \t] {
+
+}
+[\n](\r)? {
+  
+}
+
 %%
 int main(int argc, const char* argv[])
 {
