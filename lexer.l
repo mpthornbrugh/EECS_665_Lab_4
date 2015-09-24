@@ -441,8 +441,11 @@ int main(int argc, const char* argv[])
     global input file yyin (which defaults to stdin). It continues until it either reaches an 
     end-of-file (at which point it returns the value 0) or one of its actions executes a return statement.*/
 
-  while (yylex() != 0) {
+  int count = 0;
 
+  while (count < 10000) {
+    count++;
+    yylex();
   }
 
 return 0;
