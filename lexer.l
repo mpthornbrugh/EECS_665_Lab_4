@@ -437,7 +437,13 @@ int main(int argc, const char* argv[])
     yylex() returns 1 whenever an expression you have specified is found in the input text,
     0 when end of file is encountered.*/
 
-  yylex();
+    /*Make a call to yylex() recursively. Whenever yylex() is called, it scans tokens from the 
+    global input file yyin (which defaults to stdin). It continues until it either reaches an 
+    end-of-file (at which point it returns the value 0) or one of its actions executes a return statement.*/
+
+  while (yylex() != 0) {
+
+  }
 
 return 0;
 }
